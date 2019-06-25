@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    #e_coder {
+      border: 1px solid red;
+      width: 50px;
+      height: 50px;
+      border: 1px solid red;
+      background: url("images/e_coder_normal.png") no-repeat;
+
+      position: fixed;
+      top: 40%;
+      left: 0;
+
+      cursor: pointer;
+    }
+
+    #e_app {
+      position: absolute;
+      left: 50px;
+      top: -50px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="e_coder">
+    <div id="e_app">
+      <img src="images/e_coder.jpg" alt="公众号" width="150">
+    </div>
+  </div>
+  <script>
+    window.onload = function () {
+      var e_coder = document.getElementById("e_coder");
+      var e_app = document.getElementById("e_app");
+
+      e_coder.onmouseover = function () {  //进入
+        this.style.background = 'url("images/e_coder_selected.png") no-repeat';
+        e_app.style.display = "block";
+      }
+      e_coder.onmouseout = function () { //移出
+        this.style.background = 'url("images/e_coder_normal.png") no-repeat';
+        e_app.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <img id="logo" src="img/img1.jpg" alt="" width="258">
+  <script>
+    window.onload = function () {
+      var logo = document.querySelector("#logo");
+      logo.onmouseover = function () {
+        //logo.src = "img/img2.jpg"
+        this.src = "img/img2.jpg"
+      }
+      logo.onmouseout = function () {
+        //logo.src = "img/img1.jpg"
+        this.src = "img/img1.jpg"
+      }
+      logo.onmousemove = function () {
+        console.log("3")
+
+      }
+    }
+  </script>
+</body>
+
+</html>
